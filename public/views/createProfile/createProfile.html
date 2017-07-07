@@ -1,0 +1,35 @@
+<div id="create-container">
+    <div>
+        <p class="create-header">Create Profile</p>
+    </div>
+    <div>
+        <form>  
+            <div class="form-container">
+                <input ng-model="user.first_name" id="first_name" type="text"   placeholder="First Name">
+                <input ng-model="user.last_name" id="last_name" type="text"     placeholder="Last Name">            
+                <input ng-model="user.location" id="location" type="text"   placeholder="City and State">
+                <input ng-model="user.bio" id="bio" type="text" placeholder="Bio">
+                <p>Are you a traveler?</p>
+                    <p>
+                        <input ng-model="user.traveler" name="group1" type="radio"  id="traveler1" value="yes"/>
+                        <label for="traveler1">Yes</label>
+                    </p>
+                    <p>
+                        <input ng-model="user.traveler" name="group1" type="radio"  id="traveler2" value="no"/>
+                        <label for="traveler2">No</label>
+                    </p>
+                <p>Are you a guide?</p>
+                    <p>
+                        <input ng-model="user.guide" name="group2" type="radio" id="guide1"     value="yes" />
+                        <label for="guide1">Yes</label>
+                    </p>
+                    <p>
+                        <input ng-model="user.guide" name="group2" type="radio" id="guide2"     value="no"/>
+                        <label for="guide2">No</label>
+                    </p>
+                <input ng-model="user.user_password" id="password" type="password"  placeholder="Password">
+                <a ng-click="createProfile(user)" class="waves-effect waves-light btn">Submit</a>
+            </div>        
+        </form>
+    </div>
+</div>

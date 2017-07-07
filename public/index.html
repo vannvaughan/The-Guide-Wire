@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html ng-app="app">
+    <head>
+        <!--External Links -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+        
+        <!-- Internal Links -->
+        <link rel="stylesheet" href="/styles/createProfile/createProfile.css">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">The Guide Wire</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a ui-sref="login">Login</a></li>
+                    <li><a ui-sref="createProfile">Sign Up!</a></li>
+                </ul>
+            </div>
+        </nav>
+                
+        <ui-view></ui-view>
+
+        <!-- External Links -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+
+        <!-- Internal Links -->
+        <script src="./app.js"></script>
+        <script src="./views/createProfile/createProfileService.js"></script>
+        <script src="./views/login/loginService.js"></script>
+        <script src="./views/profile/profileService.js"></script>
+        <script src="./views/createProfile/createProfileCtrl.js"></script>
+        <script src="./views/login/loginCtrl.js"></script>
+        <script src="./views/profile/profileCtrl.js"></script>
+
+    </body>
+</html>

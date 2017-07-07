@@ -1,0 +1,12 @@
+.form-container {
+    margin: 0 100px;
+    padding: 0 30px 30px 30px;
+    border: 1px solid black;
+}
+.create-header {
+    font-size: 50px;
+    padding: 0 0 0 100px
+}
+#create-container {
+    
+}
