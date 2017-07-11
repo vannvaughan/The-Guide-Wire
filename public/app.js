@@ -14,7 +14,7 @@ angular.module('app', ['ui.router', 'ui.materialize'])
             controller: 'loginCtrl'
         })
         .state('profile', {
-            url: '/profile',
+            url: '/profile/:id',
             templateUrl: './views/profile/profile.html',
             controller: 'profileCtrl'
         })

@@ -1,1 +1,61 @@
-{{ user }}
+<div>
+    <div>
+        <h4>{{ user.first_name }} {{ user.last_name }}</h4>
+    </div>
+    <div>
+        <p>Location: {{ user.location }}</p>
+        <p>Bio: {{ user.bio }}</p>
+        <p>Traveler: {{ user.traveler }}</p>
+        <p>Guide: {{ user.guide }}</p>
+    </div>
+    
+    <!--Work on getting this to appear and disappear in the future-->
+    <!--<a class="waves-effect waves-light btn" ng-if="user.admin">Edit Profile</a>-->
+    
+    <div>
+        <div>
+            <h4>Guide Reviews</h4>
+        </div>
+        <div>
+            <ul ng-repeat="guideReview in guideReviews">
+                <li>{{ guideReview.rating }}</li>
+                <li>{{ guideReview.review }}</li>                 
+                <li>{{ guideReview.reviewUser }}</li>                 
+            </ul>
+        </div>
+        <div class="row">
+            <form class="col s6">
+                <div class="row">
+                    <form action="#">
+                        <p>Rate Guide</p>
+                        <p>
+                            <input ng-model="guideReview.rating" name="group1" type="radio" id="1" value="1"/>
+                            <label for="1">1</label>
+                        </p>
+                        <p>
+                            <input ng-model="guideReview.rating" name="group1" type="radio" id="2" value="2"/>
+                            <label for="2">2</label>
+                        </p>
+                        <p>
+                            <input ng-model="guideReview.rating" name="group1" type="radio" id="3"  value="3"/>
+                            <label for="3">3</label>
+                        </p>
+                        <p>
+                            <input ng-model="guideReview.rating" name="group1" type="radio" id="4" value="4"/>
+                            <label for="4">4</label>
+                        </p>
+                        <p>
+                            <input ng-model="guideReview.rating" name="group1" type="radio" id="5" value="5"/>
+                            <label for="5">5</label>
+                        </p>
+                    </form>
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea" ng-model="guideReview.review"></textarea>
+                        <label for="textarea1">Review</label>
+                        <a class="waves-effect waves-light btn" ng-click="submit(review)">Submit</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

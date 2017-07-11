@@ -1,10 +1,6 @@
 module.exports = {
-    
+
     findUser: function(req, res, next){  
-        // req.app.get('db').user_table.find({
-        //     first_name: req.body.first_name,
-        //     last_name: req.body.last_name
-        // })
         req.app.get('db').find_user([req.body.first_name, req.body.last_name])
             .then(users => {
                 if(users.length){
@@ -29,5 +25,30 @@ module.exports = {
             .catch(() => {
                 console.log('Failure!')
                 res.status(500).json('Failure!')})
-    }  
+    },
+
+    getGuideReviews: function(req, res, next){
+        req.app.get('db').get_guide_reviews([req.body.guide_id])
+            .then(() =>{
+                return res.status(200).json()
+            })
+            .catch ((err) => {
+                return res.status(500).json(err)
+            })
+    },
+    postGuideReview: function (req, res, next) {
+        req.app.body.get('db')
+            .post_guide_review([req.body.user_id, req.body.rating, req.body.review, req.body.user_id])
+            .then(() =>{
+                return res.status(200).json()
+            })
+            .catch ((err) => {
+                return res.status(500).json(err)
+            })       
+
+    }
+    
+
+
+
 }
