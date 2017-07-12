@@ -8,7 +8,8 @@ module.exports = {
                 console.log("user", user)
                 if( user.length < 1){
                 return res.status(401).json(user)
-                }
+            }
+            req.session.user = user[0];
             return res.status(200).json(user[0])
             })
             .catch(err => {

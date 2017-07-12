@@ -1,5 +1,7 @@
-SELECT user_id, rating, review
+SELECT guide_reviews.rating, guide_reviews.review, user_table.first_name, user_table.last_name
 FROM guide_reviews
-WHERE guide_id = $1;
+JOIN user_table
+ON guide_reviews.poster_id = user_table.user_id;
+
 
 

@@ -28,17 +28,18 @@ module.exports = {
     },
 
     getGuideReviews: function(req, res, next){
-        req.app.get('db').get_guide_reviews([req.body.guide_id])
-            .then(() =>{
-                return res.status(200).json()
+        req.app.get('db').get_guide_reviews([req.params.id])
+            .then((reviews) =>{
+                return res.status(200).json(reviews)
             })
             .catch ((err) => {
                 return res.status(500).json(err)
             })
     },
     postGuideReview: function (req, res, next) {
+        console.log(req.session.user);
         req.app.body.get('db')
-            .post_guide_review([req.body.user_id, req.body.rating, req.body.review, req.body.user_id])
+            .post_guide_review([req.body.user_id, req.body.rating, req.body.review, req.body.poster_id])
             .then(() =>{
                 return res.status(200).json()
             })
@@ -48,7 +49,4 @@ module.exports = {
 
     }
     
-
-
-
 }

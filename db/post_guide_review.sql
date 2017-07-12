@@ -1,3 +1,3 @@
-INSERT INTO guide_reviews (guide_id, rating, review, user_id)
-VALUES $1, $2, $3, $4
+INSERT INTO guide_reviews (user_id, rating, review)
+VALUES $1, $2, $3
 RETURNING *;
