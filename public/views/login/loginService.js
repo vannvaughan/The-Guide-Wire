@@ -13,12 +13,11 @@ angular.module('app')
         }
 
         this.login = function(user){
-                return $http.post('/api/login',  user)
-            }
+            return $http.post('/api/login',  user)
+        }
         
         this.getUserById = function(id) {
-            console.log('hello form loginService id:', id)
-          return $http.get('/api/user/' + id)
+            return $http.get('/api/user/' + id)
         }
         
     })

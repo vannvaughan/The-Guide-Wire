@@ -37,7 +37,6 @@ module.exports = {
             })
     },
     postGuideReview: function (req, res, next) {
-        console.log(req.session.user);
         req.app.body.get('db')
             .post_guide_review([req.body.user_id, req.body.rating, req.body.review, req.body.poster_id])
             .then(() =>{

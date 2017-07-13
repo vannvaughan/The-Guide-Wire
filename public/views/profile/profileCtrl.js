@@ -17,15 +17,15 @@ angular.module('app')
 
             })
             
+        $scope.postGuideReview = function(review){
+            if (review) {
+                profileService.postGuideReview(review)
+                .then(res => {
+                    
 
-        
-
-        // profileService.postGuideReview = function($stateParams, rating, review, loginService){
-        //     .then(  =>{
-                
-        //     })
-
-        // }        
+                })
+            }
+        }
         
 
     })
