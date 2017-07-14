@@ -29,31 +29,31 @@
                     <form action="#">
                         <p>Rate Guide</p>
                         <p>
-                            <input ng-model="postGuideReview.rating" name="group1" type="radio" id="1" value="1"/>
+                            <input ng-model="review.rating" name="group1" type="radio" id="1" value="1"/>
                             <label for="1">1</label>
                         </p>
                         <p>
-                            <input ng-model="postGuideReview.rating" name="group1" type="radio" id="2" value="2"/>
+                            <input ng-model="review.rating" name="group1" type="radio" id="2" value="2"/>
                             <label for="2">2</label>
                         </p>
                         <p>
-                            <input ng-model="postGuideReview.rating" name="group1" type="radio" id="3"  value="3"/>
+                            <input ng-model="review.rating" name="group1" type="radio" id="3"  value="3"/>
                             <label for="3">3</label>
                         </p>
                         <p>
-                            <input ng-model="postGuideReview.rating" name="group1" type="radio" id="4" value="4"/>
+                            <input ng-model="review.rating" name="group1" type="radio" id="4" value="4"/>
                             <label for="4">4</label>
                         </p>
                         <p>
-                            <input ng-model="postGuideReview.rating" name="group1" type="radio" id="5" value="5"/>
+                            <input ng-model="review.rating" name="group1" type="radio" id="5" value="5"/>
                             <label for="5">5</label>
                         </p>
                     </form>
                     <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea" ng-model="postGuideReview.review"></textarea>
+                        <textarea id="textarea1" class="materialize-textarea" ng-model="review.review"></textarea>
                         <label for="textarea1">Review</label>
-                        <a class="waves-effect waves-light btn" ng-click="postGuideReview(review)">Submit</a>
                     </div>
+                    <a class="waves-effect waves-light btn" ng-click="postGuideReview(review)">Submit</a>
                 </div>
             </form>
         </div>

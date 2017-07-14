@@ -1,11 +1,10 @@
 module.exports = {
     
     login: function(req, res, next){
-        console.log("Req.body", req.body)
+        // console.log("Req.body", req.body)
         req.app.get('db')
             .login([req.body.first_name, req.body.last_name, req.body.user_password])
             .then(user => {
-                console.log("user", user)
                 if( user.length < 1){
                 return res.status(401).json(user)
             }

@@ -19,8 +19,8 @@ angular.module('app', ['ui.router', 'ui.materialize'])
             controller: 'profileCtrl'
         })
         .state('home', {
-            url: '/'
-            templateUrl: '/views/home/home.html'
+            url: '/',
+            templateUrl: '/views/home/home.html',
             controller: 'homeCtrl'
         })
 

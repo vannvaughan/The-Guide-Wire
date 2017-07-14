@@ -4,8 +4,8 @@ angular.module('app')
         this.getGuideReviews = function(id) {
             return $http.get('/api/guideReviews/' + id)
         }
-        this.postGuideReviews = function(review) {
-            return $http.post('/api/guideReviews', review)
+        this.postGuideReview = function(review, id, poster_id) {
+            return $http.post('/api/guideReviews/' + id, {review: review, poster_id: poster_id})
         }    
         
     })

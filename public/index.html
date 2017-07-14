@@ -7,19 +7,12 @@
         
         <!-- Internal Links -->
         <link rel="stylesheet" href="/styles/createProfile/createProfile.css">
+        <link rel="stylesheet" href="/styles/home/home.css">
+        <link rel="stylesheet" href="/styles/profile/profile.css">
+        <link rel="stylesheet" href="/styles/navbar/navbar.css">
     </head>
     <body>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">The Guide Wire</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a ui-sref="profile">Profile</a></li>
-                    <li><a ui-sref="login">Login</a></li>
-                    <li><a ui-sref="createProfile">Sign Up!</a></li>
-                </ul>
-            </div>
-        </nav>
-                
+        <navbar></navbar>        
         <ui-view></ui-view>
 
         <!-- External Links -->
@@ -34,9 +27,24 @@
         <script src="./views/createProfile/createProfileService.js"></script>
         <script src="./views/login/loginService.js"></script>
         <script src="./views/profile/profileService.js"></script>
+        <script src="./views/home/homeService.js"></script>
         <script src="./views/createProfile/createProfileCtrl.js"></script>
         <script src="./views/login/loginCtrl.js"></script>
         <script src="./views/profile/profileCtrl.js"></script>
+        <script src="./views/home/homeCtrl.js"></script>
+        <script src="./directives/navbar/navbar.js"></script>
+        
 
     </body>
 </html>
+
+        <!--<nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">The Guide Wire</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a ui-sref="profile">Profile</a></li>
+                    <li><a ui-sref="login">Login</a></li>
+                    <li><a ui-sref="createProfile">Sign Up!</a></li>
+                </ul>
+            </div>
+        </nav>-->

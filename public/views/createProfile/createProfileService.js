@@ -6,7 +6,6 @@ angular.module('app')
         }
         
         this.createProfile = function(user){
-        console.log(user)
             return $http.post('/api/user', user)
         } 
 

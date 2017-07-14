@@ -1,6 +1,6 @@
 angular.module('app')
     .controller('profileCtrl', function( $scope, $stateParams, loginService, profileService){
-        console.log("Hello from profileCtrl")
+
         loginService.getUserById(parseInt($stateParams.id))
         .then(response => {
             $scope.user = response.data[0]
@@ -12,20 +12,24 @@ angular.module('app')
 
         profileService.getGuideReviews($stateParams.id)
             .then(response => {                
-                console.log(response.data)
                 $scope.guideReviews = response.data
 
             })
             
         $scope.postGuideReview = function(review){
-            if (review) {
-                profileService.postGuideReview(review)
+            var poster_id = loginService.getUser().user_id         
+            profileService.postGuideReview(review, $stateParams.id, poster_id)
                 .then(res => {
                     
-
+                    console.log(res)
                 })
             }
-        }
-        
 
-    })
+
+
+
+
+
+
+
+        })

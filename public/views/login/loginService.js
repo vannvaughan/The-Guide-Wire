@@ -5,6 +5,7 @@ angular.module('app')
 
         this.saveUser = function(newUser){
             // Here we save the user so the service remembers who you are
+
             user = newUser
         }
 

@@ -35,17 +35,19 @@ module.exports = {
             .catch ((err) => {
                 return res.status(500).json(err)
             })
-    },
-    postGuideReview: function (req, res, next) {
-        req.app.body.get('db')
-            .post_guide_review([req.body.user_id, req.body.rating, req.body.review, req.body.poster_id])
-            .then(() =>{
-                return res.status(200).json()
-            })
-            .catch ((err) => {
-                return res.status(500).json(err)
-            })       
-
     }
+    // postGuideReview: function (req, res, next) {
+    //     req.app.get('db')
+    //         .post_guide_review([req.body.user_id, req.body.rating, req.body.review, req.body.poster_id])
+    //         .then(() =>{
+    //             return res.status(200).json()
+    //         })
+    //         .catch ((err) => {
+    //             return res.status(500).json(err)
+    //         })       
+
+    // }
+
+    
     
 }
