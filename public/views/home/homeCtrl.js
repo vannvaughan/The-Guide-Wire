@@ -1,5 +1,3 @@
-angular.module('app')
-    .controller('homeCtrl', function( $scope ){
-
-        
-    })
+angular.module('app').controller('homeCtrl', function( $scope, homeService ){
+    
+})

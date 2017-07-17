@@ -1,11 +1,12 @@
 angular.module('app')
-    .controller('loginCtrl', function( $scope, $state, loginService ){
+    .controller('loginCtrl', function( $scope, $state, loginService, $rootScope ){
 
         $scope.login = function(user){
             loginService.login(user)
             .then( function(res){
                 loginService.saveUser(res.data)
-                $state.go('profile')
+                $rootScope.$emit('loggedIn', res.data)
+                $state.go('profile', {id: res.data.user_id})
             })
             .catch( function(res){
                 alert("Something went wrong; please try again")
@@ -13,12 +14,5 @@ angular.module('app')
                 console.log(res)
             })
         }
-        
-        
-
     })
 
-/*
-profileService('loginService') (front end)
-    $scope.user = loginService.getUser()
-*/
