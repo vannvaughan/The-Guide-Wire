@@ -20,7 +20,7 @@ angular.module('app', ['ui.router', 'ui.materialize'])
         })
         .state('home', {
             url: '/',
-            templateUrl: '/views/home/home.html',
+            templateUrl: './views/home/home.html',
             controller: 'homeCtrl'
         })
 

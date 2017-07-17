@@ -1,5 +1,3 @@
-
-
 module.exports = {
 
     postGuideReview: function(req, res, next){
@@ -17,9 +15,4 @@ module.exports = {
 
 
     }
-
-
-
-
-
 }
