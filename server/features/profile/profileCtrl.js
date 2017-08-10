@@ -16,6 +16,7 @@ module.exports = {
         },
 
     createProfile: function(req, res, next){
+        console.log("create...profile")
         req.app.get('db').create_profile([req.body.first_name, req.body.last_name, req.body.location, req.body.bio, req.body.traveler, req.body.guide, req.body.user_password])
             .then((user) => {
                 console.log('Success!')
