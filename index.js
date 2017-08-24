@@ -18,7 +18,6 @@ masterRoutes(app);
 
 app.use("/", express.static(__dirname + '/public'))
 massive(config.postgres).then(dbInstance => {
-    console.log(dbInstance)
     app.set('db', dbInstance)
 })
 

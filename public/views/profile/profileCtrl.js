@@ -19,9 +19,7 @@ angular.module('app')
         $scope.postGuideReview = function(review){
             var poster_id = loginService.getUser().user_id         
             profileService.postGuideReview(review, $stateParams.id, poster_id)
-                .then(res => {
-                    
-                    console.log(res)
+                .then(res => {                    
                 })
             }
 

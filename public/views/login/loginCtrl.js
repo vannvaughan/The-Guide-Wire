@@ -11,7 +11,6 @@ angular.module('app')
             .catch( function(res){
                 alert("Something went wrong; please try again")
                 // TODO: Add fancy modal later
-                console.log(res)
             })
         }
     })
