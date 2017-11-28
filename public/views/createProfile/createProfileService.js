@@ -8,5 +8,6 @@ angular.module('app')
         this.createProfile = function(user){
             return $http.post('/api/user', user)
         } 
+        
 
     })

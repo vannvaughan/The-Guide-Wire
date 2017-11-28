@@ -1,7 +1,8 @@
 module.exports = {
 
     findUser: function(req, res, next){  
-        req.app.get('db').find_user([req.body.first_name, req.body.last_name])
+        req.app.get('db')
+            .find_user([req.body.first_name, req.body.last_name])
             .then(users => {
                 if(users.length){
                     return res.status(401).json("User Already Exists")
@@ -16,8 +17,8 @@ module.exports = {
         },
 
     createProfile: function(req, res, next){
-        console.log("create...profile")
-        req.app.get('db').create_profile([req.body.first_name, req.body.last_name, req.body.location, req.body.bio, req.body.traveler, req.body.guide, req.body.user_password])
+        req.app.get('db')
+            .create_profile([req.body.first_name, req.body.last_name, req.body.location, req.body.bio, req.body.traveler, req.body.guide, req.body.user_password])
             .then((user) => {
                 console.log('Success!')
                 res.status(200).json(user[0])
@@ -29,7 +30,8 @@ module.exports = {
     },
 
     getGuideReviews: function(req, res, next){
-        req.app.get('db').get_guide_reviews([req.params.id])
+        req.app.get('db')
+            .get_guide_reviews([req.params.id])
             .then((reviews) =>{
                 return res.status(200).json(reviews)
             })
